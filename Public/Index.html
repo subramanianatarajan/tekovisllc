@@ -1,0 +1,121 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEKOVIS LLC</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for the logo and contact details */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: block;
+            max-width: 180px; /* Adjust the size as needed */
+            height: 140px;
+            margin-right: 40px; /* Adjust the spacing */
+            align-items: center;
+            align-content: center;
+        }
+
+        .contact-details {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="/Logo.bmp" alt="Company Logo" class="logo">
+            <h1>TEKOVIS LLC</h1>
+        </div>
+        <div class="contact-details">
+            <p>Contact us:</p>
+            <p>Phone: +971 527061945</p>
+            <p>Email: info@tekovisllc.com</p>
+            <p>Contact person: Subramanian Natarajan</p>
+            <p>Address: Sharjah Media Freezone, UAE</p>
+        </div>
+    </header>
+
+    <section id="services">
+        <h2>Our Tally Prime Customization Services</h2>
+        <ul class="service-list">
+            <li class="service-item">Incentive Report</li>
+            <li class="service-item">Block Voucher on Negative Cash Balance</li>
+            <li class="service-item"> Negative Stock Blocking on Multi Company Stock</li>
+            <li class="service-item">Ledger - Stock Item Alter History Report</li>
+            <li class="service-item">Time Scheduled Auto Email Reporting DashBoard to CEO’s</li>
+            <li class="service-item">Customer Vs Stock Item Sales Report </li>
+            <li class="service-item">Bulk Email Sales Invoice on Button Click</li>
+            <li class="service-item">Negative Stock Control by Authorization</li>
+            <li class="service-item">Tally Doc's Mailer - Invoice Email with Multi-Attachment of External File</li>
+            <li class="service-item">Hide Purchase Cost From User</li>
+            <li class="service-item">Tally Prime Document Attachment - Document Expiry Report</li>
+            <li class="service-item">Auto Email Invoice with Payment Link</li>
+            <li class="service-item">Delete Unused Ledgers & Stock Items in Tally Prime </li>
+            <li class="service-item">Sales Order Pending Carry Forward to 1st Jan After splitting Company</li>
+        </ul>
+        <!-- Enquiry form -->
+        <form id="enquiryForm">
+            <h3>Enquiry Form</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="contact">Contact:</label>
+            <input type="tel" id="contact" name="contact" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- <section id="portfolio">
+        <h2>Portfolio</h2>
+        <!-- You can add your portfolio items here -->
+    </section> -->
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Contact person: Subramanian Natarajan</p>
+        <p>Address: Sharjah Media Freezone, UAE</p>
+        <p>Email: <a href="mailto:info@tekovisllc.com">info@tekovisllc.com</a></p>
+        <p>Phone: <a href="tel:+971527061945">+971 527061945</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TEKOVIS LLC. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to handle form submission
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent default form submission
+            const name = document.getElementById('name').value;
+            const contact = document.getElementById('contact Number').value;
+            
+            const email = document.getElementById('email').value;
+
+            // Create the email content
+            const emailContent = `Name: ${name}\nContact: ${contact}\nEmail: ${email}`;
+
+            // Create a mailto link with the content
+            const mailtoLink = `mailto:info@tekovisllc.com?subject=Enquiry&body=${encodeURIComponent(emailContent)}`;
+
+            // Open the default email client with the mailto link
+            window.location.href = mailtoLink;
+        }
+
+        // Add event listener to the form submit event
+        const enquiryForm = document.getElementById('enquiryForm');
+        enquiryForm.addEventListener('submit', handleFormSubmit);
+    </script>
+
+   
+
+</body>
+</html>
